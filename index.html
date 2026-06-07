@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>5e Spellcard Generator</title>
+<link rel="stylesheet" href="stylesheet.css">
+	<!--importing libraries-->
+	<script src="jquer.js"></script>
+	<script src="html2canvas.js"></script> 
+	
+	<script>
+		var spellname = "Spell Name";
+		var level = "#";
+		var school = "school";
+		var time = "";
+		var spellrange = "";
+		var components = "";
+		var duration = "";
+		var classes = "";
+		var desc = "";
+		var higherdesc ="";
+		
+		function submitRitual(){
+			if (document.getElementById("ritual").checked == true){
+				document.getElementById("ritualtext").style.display="block";
+			}
+			else{
+				document.getElementById("ritualtext").style.display="none";
+			}
+		}
+		
+		function submitHigher(){
+			if (document.getElementById("higher").checked == true){
+				document.getElementById("highertext").style.display="block";
+				document.getElementById("higherdescgroup").style.display="block";
+			}
+			else{
+				document.getElementById("highertext").style.display="none";
+				document.getElementById("higherdescgroup").style.display="none";
+			}	
+		}
+		
+				function submitSubclass(){
+			if (document.getElementById("subclass").checked == true){
+				document.getElementById("subclasstext").style.display="block";
+				document.getElementById("subsubclass").style.display="block";
+				document.getElementById("newsubclasses").style.display="block";
+			}
+			else{
+				document.getElementById("subclasstext").style.display="none";
+				document.getElementById("subsubclass").style.display="none";
+				document.getElementById("newsubclasses").style.display="none";
+			}	
+		}
+		
+		function submitSpellName(){
+			spellname = document.getElementById("newspellname").value;
+			document.getElementById("oldspellname").innerHTML = spellname;	
+		}
+		
+		function submitLevel(){
+			level = document.getElementById("newlevel").value;
+			document.getElementById("oldlevel").innerHTML = level;
+		}
+		
+		function submitSchool(){
+			school = document.getElementById("newschool").value;
+			document.getElementById("oldschool").innerHTML = school;
+		}
+		
+		function submitTime(){
+			time = document.getElementById("newtime").value;
+			document.getElementById("oldtime").innerHTML = time;
+		}
+		
+		function submitRange(){
+		spellrange = document.getElementById("newrange").value;
+		document.getElementById("oldrange").innerHTML = spellrange;
+		}
+		
+		function submitComponents(){
+		components = document.getElementById("newcomponents").value;
+		document.getElementById("oldcomponents").innerHTML = components;
+		}
+		
+		function submitDuration(){
+		duration = document.getElementById("newduration").value;
+		document.getElementById("oldduration").innerHTML = duration;
+		}
+		
+		function submitClasses(){
+		classes = document.getElementById("newclasses").value;
+		document.getElementById("oldclasses").innerHTML = classes;
+		}
+		
+		function submitDesc(){
+		desc = document.getElementById("newdesc").value;
+		document.getElementById("olddesc").innerHTML = desc;
+		}
+		function submitHigherDesc(){
+		higherdesc = document.getElementById("newhigherdesc").value;
+		document.getElementById("oldhigherdesc").innerHTML = higherdesc;
+		}
+		
+		function getSet(){
+			submitRitual();
+			submitHigher();
+			submitSubclass();
+			submitSpellName();
+			submitLevel();
+			submitSchool();
+			submitTime();
+			submitComponents();
+			submitDuration();
+			submitClasses();
+			submitDesc();
+			submitHigherDesc();
+		}
+		window.onload=getSet;
+		
+	</script>
+
+</head>
+
+<body>
+	<div id = "html-content-holder" class ="bgparch">
+			<text class="title" id="oldspellname">SPELL NAME</text>
+			<br>
+			<text>
+				<i><text id="oldlevel"># level</text> <text id="oldschool">school</text></i>
+			</text>
+			<br>
+			<br>
+			<text class="subtitle">Casting Time:</text> 
+			<text id = "oldtime"> casting time here</text>
+			<br>
+			<div id = "ritualtext">
+				<text class="subtitle">Ritual:</text> 
+				<text> YES</text>
+			</div>
+			<text class="subtitle">Range:</text>
+			<text id = "oldrange">range here</text>
+			<br>
+			<text class="subtitle">Components:</text>
+			<text id = "oldcomponents">V, S, M</text>
+			<br>
+			<text class="subtitle">Duration:</text>
+			<text id = "oldduration">duration here</text>
+			<br>
+			<text class="subtitle">Classes:</text>
+			<text id = "oldclasses">classes here</text>
+			<br>
+			<text id = "olddesc">Description here.</text>
+			<br>
+			<div id ="highertext"><text class="subtitle"><i>At Higher Levels.  </i></text><text id = "oldhigherdesc">Description here.</text>
+			</div>
+	</div>
+	<br>
+	<div class="bgparch">
+  <input type="checkbox" id="ritual" onclick="submitRitual()">
+		<label for="ritual"><text class="subtitle">Ritual</text></label>
+		
+  <input type="checkbox" id="higher" onclick="submitHigher()">
+  <label for="higher"> <text class="subtitle">At Higher Levels</text></label>
+		<br><br>
+		<table>
+			<tr>
+					<td><text class="subtitle">Spell Name:</text></td>
+					<td><text class="subtitle">Level:</text></td>
+					<td><text class="subtitle">School:</text></td>
+					<td><text class="subtitle">Casting Time:</text></td>
+			</tr>
+			<tr>
+					<td> <input type="text" value = "Spell Name" id="newspellname"  onkeyup="submitSpellName()"/></td>
+					<td>  <input type="text" value = "# level" id="newlevel" onkeyup="submitLevel()"></td>
+					<td>  <input type="text" value = "school" id="newschool" onkeyup="submitSchool()"></td>
+					<td>  <input type="text" value = "casting time here" id="newtime" onkeyup="submitTime()"></td>
+			</tr>
+			<tr>
+					<td><text class="subtitle">Range:</text></td>
+					<td><text class="subtitle">Components:</text></td>
+					<td><text class="subtitle">Duration:</text></td>
+					<td><text class="subtitle">Classes:</text></td>
+			</tr>
+					<td> <input type="text" value = "range here" id="newrange"  onkeyup="submitRange()"/></td>
+					<td> <input type="text" value = "components here" id="newcomponents"  onkeyup="submitComponents()"/></td>
+					<td> <input type="text" value = "duration here" id="newduration"  onkeyup="submitDuration()"/></td>
+					<td> <input type="text" value = "classes here" id="newclasses"  onkeyup="submitClasses()"/></td>
+			<tr>
+			
+			</tr>
+		</table>
+		<br>
+		<text>
+		Use &lt;b&gt; and &lt;/b&gt; around a word to make it bold, &lt;i&gt; and &lt;/i&gt; around a word to make it italicized.  Use &lt;br&gt; to start a new line.
+			<br>
+		</text>
+		<br>
+		<text class="subtitle">Description:</text>
+		<textarea name = "desc" rows = "5" cols ="100" value = "enter description here" id = "newdesc" onkeyup="submitDesc()"></textarea>
+		<br>
+		<div id = "higherdescgroup"><text class="subtitle">At Higher Levels Description:</text>
+		<textarea name = "higherdesc" rows = "5" cols ="100" value = "enter description here" id = "newhigherdesc" onkeyup="submitHigherDesc()"></textarea></div>
+	</div>
+		<br>
+	<div class="bgparch" style="padding:0;">
+					<button id="btn_convert" class="button" style="margin:15px">Convert to Image</button>
+    		<br>
+			<br>
+    		<text class="title" style="margin:15px">Preview:</text>
+   			<div id="previewImg" class="bgform" align="left" style="padding-left:0;">
+			</div>
+		
+		<br>
+
+	</div>
+	
+    <script>
+       document.getElementById("btn_convert").addEventListener("click", function() {
+		html2canvas(document.getElementById("html-content-holder"),
+			{
+				allowTaint: true,
+				useCORS: true
+			}).then(function (canvas) {
+				var anchorTag = document.createElement("a");
+				document.body.appendChild(anchorTag);
+				document.getElementById("previewImg").appendChild(canvas);
+				anchorTag.download = "filename.png";
+				anchorTag.href = canvas.toDataURL();
+				anchorTag.target = '_blank';
+				anchorTag.click();
+			});
+  });
+
+    </script>
+
+</body>
+</html>

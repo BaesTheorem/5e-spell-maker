@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bgparch {
+	background-image: url("background.jpg");
+	background-color: #EFEBDB;
+	border-width:thin;
+	border-style:solid;
+	border-color:#58170D;
+	align-self: center;  
+	padding:15px; 
+	margin-left:10%;
+	margin-right:10%;
+}
+.bgform {
+	background-color: #EFEBDB;
+	border-width:thin;
+	border-style:solid;
+	border-color:#58170D;
+	align-self: center;  
+	padding:15px;
+}
+
+@font-face{
+	font-family: Lora;
+	src: url(Lora Regular 400.ttf);
+}
+
+text{
+	color: #58170D;
+	font-size: 12pt;
+	font-family:Lora;
+	line-height:20px;
+}
+text.subtitle{
+	font-weight: bold
+}
+text.title{
+	font-size:20pt;
+	text-transform:uppercase;
+	font-weight:bold;
+	
+}
+
+.button {
+	background-color: #e13534; /* crimson */
+	border-width:thin;
+	border-style:solid;
+	border-color:#58170D;
+	color: white;
+	font-size: 16px;
+	padding: 10px 20px;
+	font-family:Lora;
+	transition-duration: 0.2s;
+	text-align: center;
+}
+button:hover {
+  background-color: #58170d; /* Green */
+  color: white;
+}
