@@ -29,6 +29,8 @@ It's a fully static, self-contained page. Either:
 | `html2canvas.js` | Renders the spell card to a downloadable image |
 | `background.jpg` | The parchment-style card background |
 | `Lora Regular 400.ttf` | The Lora serif font used on cards |
+| `icon.svg` / `icon-1024.png` / `icon.icns` | App icon added by this archive (not part of the original) |
+| `favicon-32.png` / `apple-touch-icon.png` | Browser-tab / home-screen icons added by this archive |
 
 ## Attribution & license
 
@@ -40,4 +42,4 @@ The bundled third-party components retain their own licenses: jQuery (MIT), html
 
 ---
 
-*Archived on 2026-06-07. Files downloaded verbatim from the live itch.io HTML build (`html-classic.itch.zone/html/7101371/`).*
+*Archived on 2026-06-07. The tool's own files (`index.html`, `stylesheet.css`, `jquer.js`, `html2canvas.js`, `background.jpg`, `Lora Regular 400.ttf`) were downloaded verbatim from the live itch.io HTML build (`html-classic.itch.zone/html/7101371/`). The only changes by this archive are the added icon files and two `<link rel="icon">` lines in `index.html`.*

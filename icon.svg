@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="44%" r="60%">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="55%" stop-color="#f4ead0"/>
+      <stop offset="100%" stop-color="#e3d8c0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- parchment field -->
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+
+  <!-- arcane border frame (flat hairlines) -->
+  <rect x="60" y="60" width="904" height="904" fill="none" stroke="#7a1f2b" stroke-width="10"/>
+  <rect x="92" y="92" width="840" height="840" fill="none" stroke="#7a1f2b" stroke-width="4"/>
+
+  <!-- corner runes -->
+  <g fill="#7a1f2b">
+    <circle cx="120" cy="120" r="11"/>
+    <circle cx="904" cy="120" r="11"/>
+    <circle cx="120" cy="904" r="11"/>
+    <circle cx="904" cy="904" r="11"/>
+  </g>
+
+  <!-- hero arcane spark: four-point star -->
+  <g transform="translate(512 430)">
+    <!-- faint diagonal rays behind the main star -->
+    <path d="M0,-170 L20,-20 L170,0 L20,20 L0,170 L-20,20 L-170,0 L-20,-20 Z" fill="#d9c89a" transform="rotate(45)"/>
+    <path d="M0,-250 L48,-48 L250,0 L48,48 L0,250 L-48,48 L-250,0 L-48,-48 Z" fill="#7a1f2b"/>
+    <path d="M0,-150 L28,-28 L150,0 L28,28 L0,150 L-28,28 L-150,0 L-28,-28 Z" fill="#c89b3c"/>
+    <!-- crisp center -->
+    <circle cx="0" cy="0" r="26" fill="#7a1f2b"/>
+    <circle cx="0" cy="0" r="11" fill="#c89b3c"/>
+  </g>
+
+  <!-- small accent sparks -->
+  <g fill="#c89b3c">
+    <path d="M250,250 l10,-34 l10,34 l34,10 l-34,10 l-10,34 l-10,-34 l-34,-10 z"/>
+    <path d="M774,260 l8,-26 l8,26 l26,8 l-26,8 l-8,26 l-8,-26 l-26,-8 z"/>
+  </g>
+
+  <!-- title -->
+  <text x="512" y="788" text-anchor="middle"
+        font-family="Lora, Georgia, 'Times New Roman', serif"
+        font-size="150" font-weight="700" fill="#3a2417"
+        letter-spacing="2">5e</text>
+  <text x="512" y="868" text-anchor="middle"
+        font-family="Lora, Georgia, 'Times New Roman', serif"
+        font-size="58" font-weight="700" fill="#7a1f2b"
+        letter-spacing="14">SPELL MAKER</text>
+</svg>
